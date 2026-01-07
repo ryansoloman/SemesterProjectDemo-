@@ -4,15 +4,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
-    --Color: #EE7A3F;
+    --Color: #c44f15;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    position: sticky;
+    /* position: sticky; */
 }
 
 /* Header Top Bar */
@@ -73,14 +74,51 @@ body {
 
 /* Navigation */
 nav {
-    /* position: relative; */
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+
+.sticky-active {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* @keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+} */
+
+.sticky-active .nav-links {
+    padding: 10px 40px;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
+    /* padding: 15px 40px; */
+    padding-inline: 40px;
     background-color: white;
 }
 
@@ -120,8 +158,8 @@ nav .nav-links {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    background-color: #EE7A3F;
+    gap: 40px;
+    background-color: var(--Color);
     padding: 15px 40px;
     margin: 0;
 }
@@ -150,7 +188,7 @@ nav .nav-links li a i {
 }
 
 .contributor-section {
-    background-color: #EE7A3F;
+    background-color: var(--Color);
     padding: 15px 40px;
     text-align: center;
 }
@@ -171,6 +209,132 @@ nav .nav-links li a i {
     color: white;
     font-weight: 500;
     font-size: 16px;
+}
+
+.nav-title h2 {
+    /* margin-left: 20px; */
+    display: flex;
+    justify-content: center;
+    padding-block: 40px;
+    background-color: var(--Color);
+    color: #FFFFFF;
+    margin-top: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    /* border-bottom: none; */
+}
+
+/* Hide menu by default */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /* Positions it right below the nav bar */
+    left: 0;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    text-align: left;
+    border-radius: 6px;
+    /* border-bottom: none; */
+    margin-top: 15px;
+    /* margin-right: 15px; */
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown */
+.dropdown-menu li {
+    width: 100%;
+    /* border-bottom: 1px solid #f0f0f0; */
+}
+
+.dropdown-menu li a {
+    color: #333 !important;
+    padding: 12px 20px !important;
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 400;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f8f8f8;
+    color: var(--Color) !important;
+}
+
+/* Body */
+.body-content {
+    padding-block: 70px;
+    padding-inline: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    /* border-bottom: #D9D9D9 solid 1px; */
+}
+
+.body-content .par p {
+    margin-bottom: 20px;
+}
+
+.body-content .tit h2 {
+    /* margin-left: 20px; */
+    display: flex;
+    justify-content: center;
+    padding-block: 50px;
+    /* background-color: #EE7A3F; */
+    color: #3B444F;
+    /* margin-top: 1px; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+.body-content .card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.body-content .card-item {
+    width: 30%;
+    text-align: center;
+}
+
+.body-content .card-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Response */
+@media screen and (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.05);
+        transform: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }
 
 /* Responsive Design */
