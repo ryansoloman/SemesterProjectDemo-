@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Entry Form</title>
+    <link rel="stylesheet" href="./visitingform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./footer.css">
+</head>
+
+<body>
+
+    <!-- Header Top Bar -->
+    <div class="header-top">
+
+        <div class="social-links">
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+        <div class="header-info">
+
+            <a href="mailto:booking@nationaltourism.pk" class="contact-email">booking@nationaltourism.pk</a>
+
+            <span class="contact-phone">
+                <i class="fas fa-phone"></i>
+                +923 325 686 349
+            </span>
+
+            <div class="auth-links">
+                <i class="far fa-user"></i>
+                <a href="#">Sign in</a> or <a href="#">Register</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+
+        <div class="nav-container">
+
+            <div class="logo">
+                <img src="./Media/logo1.png" alt="Eco-Link Logo">
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="./index.html">HOME</a></li>
+
+            <li><a href="./visitingform.html">PLAN YOUR VISIT</a></li>
+
+            <li class=" dropdown">
+                <a href="#list">TODO LIST <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">#</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#lore">LORE <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">History About Deosai</a></li>
+                    <li><a href="#">History About Khunjerab</a></li>
+                    <li><a href="#">History About Hingol</a></li>
+                    <li><a href="#">History About Chitral</a></li>
+                    <li><a href="#">History About Margalla-Hills</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#mapsite">MAP SITE <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Deosai National Park</a></li>
+                    <li><a href="#">Khunjerab Pass National Park</a></li>
+                    <li><a href="#">Hingol National Park</a></li>
+                    <li><a href="#">Chitral National Park</a></li>
+                    <li><a href="#">Margalla Hills National Park</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#alert">ALERT</a></li>
+
+            <li><a href="./contactform.html">CONTACT US</a></li>
+
+        </ul>
+
+        <div class="contributor-section">
+
+            <ul>
+                <li><a href="#">BECOME A CONTRIBUTOR <i class="fas fa-chevron-down"></i></a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- Contact Form -->
+    <div class="main-div">
+        <div class="I-line">
+            <h1>We'd love to hear from you</h1>
+            <div class="II-line">
+                <a href="./index.html">Home</a> <span>></span>We'd love to hear from you
+            </div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="full-pageJK">
+
+        <div class="main-divJK">
+            <form>
+                <h2 class="h2JK">Visitor Registration</h2>
+                <p class="pJK">Please fill out the form below to check-in.</p>
+
+                <div class="input-groupJK">
+                    <label for="name.j.">Full Name</label>
+                    <input type="text" id="name.j." placeholder="Ahmed ali" required>
+                </div>
+
+                <div class="input-groupJK">
+                    <label for="email.j.">Email Address</label>
+                    <input type="email" id="email.j." placeholder="aptech@example.com" required>
+                </div>
+
+                <div class="rowjk">
+                    <div class="input-groupJK">
+                        <label for="phone.j.">Phone Number</label>
+                        <input type="tel" id="phone.j." placeholder="+92 302 2779945" required>
+                    </div>
+                    <div class="input-groupJK">
+                        <label for="date.j.">Date of Visit</label>
+                        <input type="date" id="date.j." required>
+                    </div>
+                </div>
+
+                <div class="input-groupJK">
+                    <label>Status</label>
+                    <div class="gender-options">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required> Adult
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female"> Juvenile
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="other"> Child
+                        </label>
+                    </div>
+                </div>
+                <button class="submit-btnJK">Register Visit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-r">
+
+        <div class="image">
+
+            <img src="./Media/logo1.png" alt="logo">
+
+        </div>
+
+        <!-- <div class="footer-links"> -->
+        <div class="foot-r">
+
+            <h4>Company</h4>
+            <ul>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>PrivacyStatement</li>
+                <li>Terms of Use</li>
+                <li>Give Us Feedbacks</li>
+            </ul>
+
+        </div>
+
+        <div class="foot-r">
+
+            <h4>Zi Soft Tech</h4>
+            <ul>
+                <li>Web Development</li>
+                <li>Soft Dev</li>
+                <li>HostingZi</li>
+                <li>Digital Smart Cards</li>
+                <li>Travelzi CRM</li>
+            </ul>
+
+        </div>
+
+        <div class="foot-r">
+
+            <h4>Support</h4>
+            <ul>
+                <li>Account</li>
+                <li>Legal</li>
+                <li>Contact</li>
+                <li>Affiliate Program</li>
+                <li>Privacy Policy</li>
+            </ul>
+
+        </div>
+        <!-- </div> -->
+
+        <div>
+
+            <p class="MailingList-r">Mailing List</p>
+            <p class="MailingList-r">Sign up for our mailing list to get latestnd offers.</p>
+            <br>
+            <input type="email" placeholder="Enter your email" class="email-r">
+            <button type="submit" class="btnemailr">Subscribe</button>
+
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
