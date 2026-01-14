@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact-us</title>
+    <title>Visitor Entry Form</title>
+    <link rel="stylesheet" href="./visitingform.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./contactform.css">
-    <!-- <link rel="stylesheet" href="./footer.css"> -->
+    <link rel="stylesheet" href="./footer.css">
 </head>
 
 <body>
+
     <!-- Header Top Bar -->
     <div class="header-top">
 
@@ -110,43 +111,60 @@
         </div>
 
     </nav>
-
-    <!-- Total Form -->
-    <div class="form">
-        <!-- Contact Form -->
-        <div class="main-div">
-            <div class="I-line">
-                <h1>We'd love to hear from you</h1>
-                <div class="II-line">
-                    <a href="./index.html">Home</a> <span>></span>We'd love to hear from you
-                </div>
+    <!-- Contact Form -->
+    <div class="main-div">
+        <div class="I-line">
+            <h1>We'd love to hear from you</h1>
+            <div class="II-line">
+                <a href="./index.html">Home</a> <span>></span>We'd love to hear from you
             </div>
         </div>
-        <!-- Form -->
-        <div class="for-message">
-            <h1>Sends us a Message</h1>
-        </div>
-        <div class="for-form">
+    </div>
+
+    <!-- Form -->
+    <div class="full-pageJK">
+
+        <div class="main-divJK">
             <form>
-                <div class="row">
-                    <div class="inputs">
-                        <input type="text" id="name" required>
-                        <label for="name">Your name</label>
+                <h2 class="h2JK">Visitor Registration</h2>
+                <p class="pJK">Please fill out the form below to check-in.</p>
+
+                <div class="input-groupJK">
+                    <label for="name.j.">Full Name</label>
+                    <input type="text" id="name.j." placeholder="Ahmed ali" required>
+                </div>
+
+                <div class="input-groupJK">
+                    <label for="email.j.">Email Address</label>
+                    <input type="email" id="email.j." placeholder="aptech@example.com" required>
+                </div>
+
+                <div class="rowjk">
+                    <div class="input-groupJK">
+                        <label for="phone.j.">Phone Number</label>
+                        <input type="tel" id="phone.j." placeholder="+92 302 2779945" required>
                     </div>
-                    <div class="inputs">
-                        <input type="text" id="number" required>
-                        <label for="number">Phone No.</label>
+                    <div class="input-groupJK">
+                        <label for="date.j.">Date of Visit</label>
+                        <input type="date" id="date.j." required>
                     </div>
                 </div>
-                <div class="inputs">
-                    <input type="text" id="I-email" required>
-                    <label for="I-email">Email Id</label>
+
+                <div class="input-groupJK">
+                    <label>Status</label>
+                    <div class="gender-options">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required> Adult
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female"> Juvenile
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="other"> Child
+                        </label>
+                    </div>
                 </div>
-                <div class="inputs">
-                    <textarea id="message" rows="8" required></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-                <button class="j-btn">SUBMIT</button>
+                <button class="submit-btnJK">Register Visit</button>
             </form>
         </div>
     </div>

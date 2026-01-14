@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
 
-.for-message{
+.for-message {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,68 +13,69 @@
 }
 
 .main-div {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('./Media/hendrik-cornelissen--qrcOR33ErA-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  text-align: center;
-  color: white;
-  font-family: 'poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('./Media/hendrik-cornelissen--qrcOR33ErA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'poppins', sans-serif;
 }
 
 .I-line h1 {
-  font-size: 45px;
-  margin-bottom: 10px;
-  font-weight: 500;
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .II-line {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 .II-line a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 .II-line a:hover {
-  color: gray;
+    color: gray;
 }
 
 .II-line span {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
-.for-message{
+.for-message {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-block: 100px;
 }
 
-form{
+form {
     width: 90%;
     max-width: 600px;
 }
 
-.for-form{
+.for-form {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-block: 100px;
 }
 
-.inputs{
+.inputs {
     margin-bottom: 30px;
     position: relative;
 }
 
-input, textarea{
+input,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid lightgray;
@@ -83,7 +84,7 @@ input, textarea{
     color: black;
 }
 
-label{
+label {
     height: 100%;
     position: absolute;
     top: 0;
@@ -93,7 +94,7 @@ label{
     transition: 0.2s;
 }
 
-.j-btn{
+.j-btn {
     padding: 10px;
     outline: 0;
     border: 1px solid lightgray;
@@ -104,18 +105,18 @@ label{
 input:focus~label,
 input:valid~label,
 textarea:focus~label,
-textarea:valid~label{
+textarea:valid~label {
     top: -35px;
     font-size: 14px;
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.row .inputs{
+.row .inputs {
     flex-basis: 48%;
 }
 
@@ -150,7 +151,7 @@ textarea:valid~label{
     font-size: medium;
 }
 
-#footer-r > .image > img {
+#footer-r>.image>img {
     margin-left: 15px;
     margin-top: 30px;
     background-color: white;
@@ -172,7 +173,7 @@ textarea:valid~label{
 }
 
 
-h4{
+h4 {
     text-align: start;
 }
 
@@ -203,4 +204,10 @@ h4{
     color: white;
     cursor: pointer;
     margin-left: 5px;
+}
+
+.j-btn {
+    color: white;
+    background-color: #007BFF;
+    font-size: medium;
 }

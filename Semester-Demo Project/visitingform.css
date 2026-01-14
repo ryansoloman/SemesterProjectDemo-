@@ -1,0 +1,130 @@
+.full-pageJK {
+    font-family: 'poppins', sans-serif;
+    background-color: hsl(160, 16%, 96%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-divJK {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.h2JK {
+    font-size: 24px;
+}
+
+.pJK {
+    color: hsl(0, 0%, 40%);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.input-groupJK {
+    margin-bottom: 15px;
+}
+
+.input-groupJK label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.input-groupJK input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 87%);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.rowjk {
+    display: flex;
+    gap: 15px;
+}
+
+.rowjk .input-groupJK {
+    flex: 1;
+}
+
+.submit-btnJK {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.submit-btnJK:hover {
+    background-color: #0056b3;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.radio-label {
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.main-div {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('./Media/hendrik-cornelissen--qrcOR33ErA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'poppins', sans-serif;
+}
+
+.I-line h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.II-line {
+    font-size: 15px;
+}
+
+.II-line a {
+    color: white;
+    text-decoration: none;
+}
+
+.II-line a:hover {
+    color: gray;
+}
+
+.II-line span {
+    margin: 0 10px;
+}

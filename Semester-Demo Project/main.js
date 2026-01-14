@@ -17,7 +17,7 @@ navItems.forEach(item => {
 // Smooth scrolling for nav bar
 window.addEventListener("scroll", function () {
     const nav = document.querySelector("nav");
-    if (window.scrollY > 400) {
+    if (window.scrollY > 350) {
         nav.classList.add("sticky-active");
     } else {
         nav.classList.remove("sticky-active");
