@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Park Portal - Login</title>
+    <style>
+        /* CSS Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Same nature background image */
+            background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay to darken background slightly */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        /* Glossy Circles */
+        .glass-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(1.9px);
+            -webkit-backdrop-filter: blur(1.9px);
+        }
+
+        .circle-1 {
+            width: 250px;
+            height: 250px;
+            top: -50px;
+            left: -50px;
+        }
+
+        .circle-2 {
+            width: 180px;
+            height: 180px;
+            bottom: -30px;
+            right: -30px;
+        }
+
+        /* Main Container - Transparent Glass Look */
+        .container {
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+            border-radius: 30px;
+            width: 420px;
+            text-align: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(1.9px);
+            -webkit-backdrop-filter: blur(1.9px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Form Inputs */
+        .input-box {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .input-box:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #8bc34a;
+            /* Ranger Green */
+        }
+
+        /* Login Button */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #a67c52;
+            /* Earthy Brown */
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 10px;
+            transition: 0.4s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background: #8d623a;
+            transform: translateY(-2px);
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+        }
+
+        .options a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .options a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glass-circle circle-1"></div>
+    <div class="glass-circle circle-2"></div>
+
+    <div class="container">
+        <h1>Welcome Back</h1>
+        <p>Login to your Ranger Portal</p>
+
+        <form id="loginForm">
+            <input type="email" id="email" class="input-box" placeholder="Email Address" required>
+            <input type="password" id="password" class="input-box" placeholder="Password" required>
+
+            <div class="options">
+                <label><input type="checkbox" style="margin-right: 5px;"> Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn">Login to Portal</button>
+        </form>
+
+        <div class="footer">
+            New Explorer? <a href="./signUp.html">Create an Account</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const users = JSON.parse(localStorage.getItem('parkUsers')) || [];
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Login Successful',
+                    text: `Happy Exploring, ${user.name}!`,
+                    showConfirmButton: false,
+                    timer: 2000,
+                    background: 'rgba(255, 255, 255, 0.9)'
+                }).then(() => {
+                    window.location.href = "index.html";
+                });
+            } else {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Access Denied',
+                    text: 'Invalid Email or Password!',
+                    confirmButtonColor: '#a67c52'
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
